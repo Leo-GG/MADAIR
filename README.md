@@ -3,7 +3,7 @@
 Madrid's air quality data visualization.
 This is a simple web application for interactive data visualization using [Streamlit](http://streamlit.io/). 
 
-# [ACCESS THE APP](https://github.com/Leo-GG/MADAIR)
+# [ACCESS THE APP](https://madair-ledfbcmyhpjl8ysantlqnq.streamlit.app/)
 
 I gathered public data from the [official city hall repository](https://datos.madrid.es/), merged and cleaned it, ran a quick outlier detection process and uploaded them to an [AWS RDS](http://aws.com/rds). The data consists of measurements of different air contaminants at different locations in the city in the period between 2001 and 2024. 
 
