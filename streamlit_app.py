@@ -13,14 +13,19 @@ conn = st.connection('mysql', type='sql')
 df = conn.query('SELECT * from AirData;', ttl=600)
 df_anomalies = conn.query('SELECT * from Outliers;', ttl=600)
 
-# Load Data
-@st.cache_data
-def load_data(file_path):
-    return pd.read_parquet(file_path)
+st.markdown("<h1 style='text-align: center;'>Madrid's Air Quality Data 2001-2024</h1>", unsafe_allow_html=True)
+paragraph = """
+<p style='text-align: justify;'>
+    This is a simple web application for interactive data visualization built using <a href="http://streamlit.io" target="_blank">Streamlit</a>. 
+    I gathered public data from <a href="https://datos.madrid.es" target="_blank">the official city hall repository</a>, merged and cleaned it, ran a quick outlier 
+    detection process and uploaded them to an <a href="http://aws.com/rds" target="_blank">AWS RDS</a>.
+    The data consists of measurements of different air contaminants at different locations in the city in the period between 2001 and 2024. The code used to download and process the data is
+    available on the <a href="https://github.com/Leo-GG/MADAIR" target="_blank">Github repository</a>.
+</p>
+"""
+st.markdown(paragraph, unsafe_allow_html=True)
+st.divider()
 
-# Load data from the local file
-#df = load_data(DATA_FILE_PATH)
-#df_anomalies = load_data(ANOMALIES_FILE_PATH)
 
 # Convert Date column to datetime
 df['Date'] = pd.to_datetime(df['Date'])
