@@ -4,3 +4,4 @@ seaborn==0.13.2
 matplotlib==3.7.5
 sqlalchemy
 pymysql
+toml
