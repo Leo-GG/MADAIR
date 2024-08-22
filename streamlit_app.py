@@ -3,8 +3,6 @@ import pandas as pd
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
-#import pymysql # st.connection doesn't work because it can't install mysqlclient 
-#import toml
 
 # Use wide layout
 st.set_page_config(layout='wide', initial_sidebar_state='expanded')
@@ -12,25 +10,8 @@ st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 # Initialize connection.
 conn = st.connection('mysql', type='sql')
 
-# Reading data
-#toml_data = toml.load("secrets.toml")
-# saving each credential into a variable
-#HOST_NAME = toml_data['mysql']['host']
-#DATABASE = toml_data['mysql']['database']
-#PASSWORD = toml_data['mysql']['password']
-#USER = toml_data['mysql']['user']
-#PORT = toml_data['mysql']['port']
-
-
-# Perform query.
-## use pymysql instead of streamlit.connect
-#connection_string = f'mysql+pymysql://{USER}:{PASSWORD}@{HOST_NAME}:{PORT}/{DATABASE}'
-#engine = create_engine(connection_string)
-
 df = conn.query('SELECT * from AirData;', ttl=600)
-#df=pd.read_sql(f"SELECT * FROM AirData", con=engine)
 df_anomalies = conn.query('SELECT * from Outliers;', ttl=600)
-#df_anomalies=pd.read_sql(f"SELECT * FROM Outliers", con=engine)
 
 # Load Data
 @st.cache_data
