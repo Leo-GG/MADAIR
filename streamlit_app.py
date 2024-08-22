@@ -4,6 +4,7 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pymysql # st.connection doesn't work because it can't install mysqlclient 
+import toml
 
 # Use wide layout
 st.set_page_config(layout='wide', initial_sidebar_state='expanded')
