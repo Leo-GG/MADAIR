@@ -5,3 +5,4 @@ matplotlib==3.7.5
 sqlalchemy
 pymysql
 toml
+mysqlclient
