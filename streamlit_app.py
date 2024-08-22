@@ -49,7 +49,7 @@ df['Date'] = pd.to_datetime(df['Date'])
 # Sidebar for contaminant selection
 st.sidebar.header('Select Contaminant')
 contaminants = list(set(df.Contaminant.values))
-selected_contaminant = st.sidebar.selectbox('Contaminant', contaminants)
+selected_contaminant = st.sidebar.selectbox('Contaminant', contaminants,index=1)
 
 # Calculate default date range
 max_date = df['Date'].max()
