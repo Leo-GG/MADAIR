@@ -1,6 +1,6 @@
 # MADAIR
 
-# [ONLINE APP](https://madair-ledfbcmyhpjl8ysantlqnq.streamlit.app/)
+# [ONLINE APP](https://madair.streamlit.app/)
 
 Madrid's air quality data visualization.
 This is a simple web application for interactive data visualization using [Streamlit](http://streamlit.io/). 
