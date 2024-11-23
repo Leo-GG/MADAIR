@@ -13,7 +13,7 @@ st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 #df = conn.query('SELECT * from AirData;', ttl=600) read from local instead
 df = pd.read_parquet('data/AirData.parquet')
 #df_anomalies = conn.query('SELECT * from Outliers;', ttl=600)
-df = pd.read_parquet('data/Anomalies_count.parquet')
+df_anomalies = pd.read_parquet('data/Anomalies_count.parquet')
 
 st.markdown("<h1 style='text-align: center;'>Madrid's Air Quality Data 2001-2024</h1>", unsafe_allow_html=True)
 paragraph = """
