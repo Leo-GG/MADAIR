@@ -20,7 +20,7 @@ paragraph = """
 <p style='text-align: justify;'>
     This is a simple web application for interactive data visualization built using <a href="http://streamlit.io" target="_blank">Streamlit</a>. 
     I gathered public data from <a href="https://datos.madrid.es" target="_blank">the official city hall repository</a>, merged and cleaned it, ran a quick outlier 
-    detection process and uploaded them to an <a href="http://aws.com/rds" target="_blank">AWS RDS</a>.
+    detection process and uploaded them to an <a href="http://aws.com/rds" target="_blank">AWS RDS</a>. Then AWS started charging disproportionate prices, so the data is no read from a local parquet file.
     The data consists of measurements of different air contaminants at different locations in the city in the period between 2001 and 2024. The code used to download and process the data is
     available on the <a href="https://github.com/Leo-GG/MADAIR" target="_blank">Github repository</a>.
 </p>
